@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "../ui/button";
 
 const formSchema = z.object({
-  name: z.string().min(3),
+  name: z.string().min(3).max(50),
 });
 
 const onSubmit = async (values: z.infer<typeof formSchema>) => {
